@@ -29,26 +29,7 @@ const unique = arr => [...new Set(arr)];
 ```js
 const flat = arr => arr.flat(Infinity);
 ```
-
----
-
-## 📆 Daily Streak Plan
-
-### Step 1 — Learn
-
-Pick one small JavaScript concept daily
-
-### Step 2 — Build
-
-Write a clean one-liner or short snippet
-
-### Step 3 — Share
-
-Post on GitHub + Medium + LinkedIn
-
-### Step 4 — Repeat
-
-Stay consistent and improve daily
+## Learn and build daily !
 
 ---
 
