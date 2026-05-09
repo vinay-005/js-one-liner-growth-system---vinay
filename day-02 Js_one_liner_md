@@ -1,0 +1,55 @@
+# 📅 Day 2 — Check Falsy Values in One Line
+
+**By Vinay Tiwari**
+
+A simple utility to quickly check if a value is falsy in JavaScript.
+
+---
+
+## 🔹 One-Liner
+
+```js
+const isFalsy = val => !val;
+```
+
+---
+
+## 🧠 What are falsy values?
+
+JavaScript treats these as `false` in boolean context:
+
+* `0`
+* `""` (empty string)
+* `null`
+* `undefined`
+* `false`
+* `NaN`
+
+---
+
+## ⚡ Example
+
+```js
+isFalsy(0);        // true
+isFalsy("");       // true
+isFalsy("hello");  // false
+```
+
+---
+
+## 💡 Use Cases
+
+* Form validation
+* API response checks
+* Guard conditions in functions
+
+---
+
+## 🚀 Why use this?
+
+* Cleaner than repeated `if` checks
+* Reusable utility function
+* Improves readability
+
+---
+## Vinay Tiwari
