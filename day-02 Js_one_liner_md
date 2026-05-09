@@ -1,6 +1,6 @@
-# 📅 Day 2 — Check Falsy Values in One Line
+## 📅 Day 2 — Check Falsy Values in One Line
 
-**By Vinay Tiwari**
+## By Vinay Tiwari
 
 A simple utility to quickly check if a value is falsy in JavaScript.
 
@@ -52,4 +52,4 @@ isFalsy("hello");  // false
 * Improves readability
 
 ---
-## Vinay Tiwari
+
