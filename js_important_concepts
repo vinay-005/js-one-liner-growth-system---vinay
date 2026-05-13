@@ -1,0 +1,308 @@
+# 📘 JavaScript Interview Questions & Answers
+
+A curated list of **important JavaScript interview questions** with simple explanations and examples.
+
+---
+
+## 📌 Table of Contents
+
+* Variables (`var`, `let`, `const`)
+* Closures
+* Hoisting
+* Equality (`==` vs `===`)
+* Event Loop
+* Promises
+* `this` Keyword
+* Arrow Functions
+* Callbacks
+* Debouncing & Throttling
+* Prototypes
+* Async/Await
+* Scope
+* IIFE
+* Currying
+* Memoization
+* DOM
+* Spread & Rest
+
+---
+
+## 🔹 1. Difference between `var`, `let`, and `const`
+
+| Feature   | var      | let   | const |
+| --------- | -------- | ----- | ----- |
+| Scope     | Function | Block | Block |
+| Redeclare | ✅        | ❌     | ❌     |
+| Reassign  | ✅        | ✅     | ❌     |
+
+```js
+var a = 1;
+let b = 2;
+const c = 3;
+```
+
+---
+
+## 🔹 2. What is Closure?
+
+A closure allows a function to access variables from its outer scope even after execution.
+
+```js
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    return count;
+  };
+}
+
+const fn = outer();
+fn(); // 1
+fn(); // 2
+```
+
+---
+
+## 🔹 3. What is Hoisting?
+
+JavaScript moves declarations to the top.
+
+```js
+console.log(a); // undefined
+var a = 5;
+```
+
+* `var` → hoisted as `undefined`
+* `let`, `const` → temporal dead zone
+
+---
+
+## 🔹 4. Difference between `==` and `===`
+
+```js
+5 == "5"   // true
+5 === "5"  // false
+```
+
+* `==` → loose equality (type conversion)
+* `===` → strict equality
+
+---
+
+## 🔹 5. Event Loop
+
+Handles asynchronous execution in JavaScript.
+
+```js
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timeout");
+}, 0);
+
+console.log("End");
+```
+
+**Output:**
+
+```
+Start
+End
+Timeout
+```
+
+---
+
+## 🔹 6. Promises
+
+Used for async operations.
+
+```js
+const promise = new Promise((resolve, reject) => {
+  resolve("Success");
+});
+
+promise.then(res => console.log(res));
+```
+
+---
+
+## 🔹 7. `this` Keyword
+
+Refers to the object calling the function.
+
+```js
+const obj = {
+  name: "Rahul",
+  greet() {
+    console.log(this.name);
+  }
+};
+```
+
+---
+
+## 🔹 8. Arrow vs Normal Function
+
+| Feature   | Normal    | Arrow         |
+| --------- | --------- | ------------- |
+| this      | Dynamic   | Lexical       |
+| arguments | Available | Not available |
+
+```js
+const fn = () => console.log("Arrow");
+```
+
+---
+
+## 🔹 9. Callback Function
+
+Function passed as an argument.
+
+```js
+function greet(name, callback) {
+  console.log(name);
+  callback();
+}
+```
+
+---
+
+## 🔹 10. Debouncing
+
+Limits function execution.
+
+```js
+function debounce(fn, delay) {
+  let timer;
+  return function () {
+    clearTimeout(timer);
+    timer = setTimeout(fn, delay);
+  };
+}
+```
+
+---
+
+## 🔹 11. Throttling
+
+Runs a function at fixed intervals.
+
+---
+
+## 🔹 12. Prototype
+
+JavaScript uses prototypal inheritance.
+
+```js
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.sayHi = function () {
+  console.log("Hi");
+};
+```
+
+---
+
+## 🔹 13. Async/Await
+
+Cleaner way to handle promises.
+
+```js
+async function fetchData() {
+  const res = await fetch("url");
+}
+```
+
+---
+
+## 🔹 14. Scope
+
+* Global Scope
+* Function Scope
+* Block Scope
+
+---
+
+## 🔹 15. IIFE
+
+Immediately Invoked Function Expression.
+
+```js
+(function () {
+  console.log("IIFE");
+})();
+```
+
+---
+
+## 🔹 16. Currying
+
+```js
+function add(a) {
+  return function (b) {
+    return a + b;
+  };
+}
+```
+
+---
+
+## 🔹 17. Memoization
+
+Caching results for performance optimization.
+
+---
+
+## 🔹 18. DOM
+
+DOM represents HTML as objects.
+
+---
+
+## 🔹 19. Spread Operator
+
+```js
+const arr = [1, 2];
+const newArr = [...arr, 3];
+```
+
+---
+
+## 🔹 20. Rest Parameter
+
+```js
+function sum(...args) {
+  return args.reduce((a, b) => a + b);
+}
+```
+
+---
+
+## 🚀 How to Use
+
+1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/js-interview-questions.git
+```
+
+2. Start revising concepts 📚
+
+---
+
+## ⭐ Contribute
+
+Feel free to:
+
+* Add more questions
+* Improve explanations
+* Submit pull requests
+
+---
+
+## 📌 Author
+
+Vinay Tiwari
